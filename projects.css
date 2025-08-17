@@ -1,0 +1,266 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* verhindert horizontalen Scroll */
+}
+
+nav {
+    position: fixed;      /* fixiert die Nav-Leiste */
+    top: 0;               /* ganz oben */
+    left: 0;
+    width: 100%;          /* volle Breite */
+    height: 40px;
+    background-color: rgba(0, 99, 178, 1);
+    display: flex;
+    align-items: center;  /* vertikal zentriert */
+    padding-left: 30px;
+    gap: 30px;
+    z-index: 1000;        /* sicherstellen, dass Nav über allem liegt */
+}
+
+nav a {
+    font-family: 'Archivo', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    height: 40px;           /* Höhe an Nav anpassen */
+    line-height: 40px;      /* Vertikale Zentrierung */
+    padding: 0 12px;        /* horizontaler Innenabstand */
+    display: inline-block;  /* damit Höhe wirkt */
+}
+
+nav a:hover {
+    background-color: rgba(148, 232, 255, 1);
+    color: black;           /* bessere Lesbarkeit */
+    border-radius: 0;       /* kein Rundung */
+}
+
+/* HEADER */
+.projects-header {
+    display: flex;               /* Flexbox aktivieren */
+    flex-direction: column;      /* h1 und Buttons untereinander */
+    align-items: center;         /* horizontal zentrieren */
+    justify-content: center;     /* vertikal zentrieren */
+    margin-top: 40px;
+    height: 200px;
+    background-color: rgba(3, 33, 64, 1);
+}
+
+.projects-header h1{
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    color: rgba(148, 232, 255, 1);
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* animierte Linie unter dem Text */
+.menu-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.menu-btn:hover {
+    color: rgba(0, 99, 178, 1); /* Farbe beim Hover ändern (optional) */
+}
+
+.menu-btn:hover::after {
+    width: 100%;
+}
+
+/* aktiver Button */
+.menu-btn.active {
+    color: rgba(0, 99, 178, 1);
+}
+
+.menu-btn.active::after {
+    width: 100%;
+}
+
+  
+.content-container {
+    display: none; /* Standardmäßig ausblenden */
+    width: 100%;
+}
+
+.content-container.active {
+    display: flex;
+    flex-direction: column; /* Elemente untereinander */
+    align-items: center;    /* horizontal zentrieren */
+}
+
+.content-container h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+}
+
+/* 3D Container */
+#\33 d-container, 
+#websites-container {
+    text-align: center; 
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+#\33 d-container h2,
+#websites-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+    gap: 20px;
+    justify-items: center; /* Bilder horizontal zentrieren */
+}
+
+.image-grid img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Card-Wrapper */
+.image-card {
+    position: relative;
+    width: 600px;        /* wie zuvor */
+    height: 400px;
+    overflow: hidden;
+    display: inline-block; /* oder block wenn du grid benutzt */
+    border-radius: 6px;    /* optional */
+  }
+  
+  /* Bild */
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  /* leichtes Zoom beim Hover (optional, wirkt schön) */
+  .image-card:hover img {
+    transform: scale(1.03);
+  }
+  
+  /* weißes Overlay, 60% Deckkraft */
+  .image-card .overlay {
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(255,255,255,0.6); /* 60% weiß */
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none; /* Klicks gehen durch (wichtig für Modal) */
+  }
+  
+  /* beim Hover erscheint das weiße 'Blatt' */
+  .image-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* für Tastatur-Fokus ebenfalls sichtbar machen (zugänglich) */
+  .image-card:focus-within .overlay,
+  .image-card:focus .overlay {
+    opacity: 1;
+  }  
+
+/* modal container */
+/* Modal Hintergrund */
+.modal {
+    display: none; /* unsichtbar standardmäßig */
+    position: fixed;
+    z-index: 2000; /* über allem */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* schwarzer Hintergrund */
+  }
+  
+  .modal-content {
+    background: white;
+    color: black;
+    margin: auto;
+    padding: 20px;
+    max-width: 800px;
+    max-height: 80%;
+    overflow-y: auto;  /* Scroll falls Inhalt zu groß */
+    border-radius: 8px;
+  }
+
+  .modal-content h2 {
+    font-family: 'Archivo Black', sans-serif;
+    color: rgba(0, 99, 178, 1);
+  }
+
+  .modal-content p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+  }
+
+  ul, li {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+  }  
+
+  .modal-content img,
+  .modal-content video {
+    width: 100%;              /* nimmt volle Breite des Containers */
+    max-width: 600px;         /* optional: maximale Breite */
+    height: 400px;            /* feste Höhe */
+    object-fit: cover;        /* schneidet zu, damit es sauber aussieht */
+    display: block;
+    margin: 10px auto;        /* mittig ausrichten mit Abstand */
+    border-radius: 8px;       /* optional: abgerundete Ecken */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* etwas Tiefe */
+  }  
+  
+  /* Bild-Animation */
+  @keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Schließen-Button */
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff4444;
+  }
+  
+  /* Bild-Beschriftung */
+  #caption {
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  
+

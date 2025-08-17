@@ -1,0 +1,386 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* verhindert horizontalen Scroll */
+  }
+
+nav {
+    position: fixed;      /* fixiert die Nav-Leiste */
+    top: 0;               /* ganz oben */
+    left: 0;
+    width: 100%;          /* volle Breite */
+    height: 40px;
+    background-color: rgba(0, 99, 178, 1);
+    display: flex;
+    align-items: center;  /* vertikal zentriert */
+    padding-left: 30px;
+    gap: 30px;
+    z-index: 1000;        /* sicherstellen, dass Nav über allem liegt */
+}
+
+nav a {
+    font-family: 'Archivo', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    height: 40px;           /* Höhe an Nav anpassen */
+    line-height: 40px;      /* Vertikale Zentrierung */
+    padding: 0 12px;        /* horizontaler Innenabstand */
+    display: inline-block;  /* damit Höhe wirkt */
+}
+
+nav a:hover {
+    background-color: rgba(148, 232, 255, 1);
+    color: black;           /* bessere Lesbarkeit */
+    border-radius: 0;       /* kein Rundung */
+}
+
+
+header {
+    background-color: rgba(3, 33, 64, 1);
+    height: 500px;
+    width: 100vw;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 300px;
+    padding-right: 10px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 30px;
+}
+
+.blue-text {
+    color: rgba(148, 232, 255, 1);
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.white-text {
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    margin-top: 60px;
+}
+
+.study-text {
+    display: flex;
+    align-items: center;   /* Vertikal zentriert */
+    gap: 15px;             /* Abstand zwischen Logo und Text */
+    margin-top: 20px;      /* Abstand nach oben */
+}
+
+.study-text img {
+    max-height: 40px;      /* Logo-Größe begrenzen */
+    width: auto;
+    border-radius: 5px;    /* Optional: abgerundete Ecken */
+}
+
+.study-text p {
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    margin: 0;             /* Entfernt Standard-Abstand */
+}
+
+section {
+    display: flex;
+    flex-direction: column;  /* Überschrift oben, Bilder darunter */
+    justify-content: center; /* optional: vertikal zentrieren, je nach Höhe */
+    align-items: center;     /* horizontal zentrieren aller Kinder */
+    padding: 30px;
+    text-align: center;      /* Überschrift zentrieren */
+}
+
+section h2 {
+    color: rgba(0, 99, 178, 1);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px; /* Abstand nach unten zu den Bildern */
+}
+
+.technical-skills {
+    margin-top: 20px;
+    display: flex;          /* Bilder nebeneinander */
+    gap: 100px;              /* Abstand zwischen den Bildern */
+    justify-content: center; /* Bilder horizontal zentrieren */
+}
+
+.technical-skills img {
+    max-width: 200px;       /* Größe der Bilder anpassen */
+    height: auto;
+}
+
+section h3 {
+    color: rgba(0, 99, 178, 1);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px; 
+}
+
+.technical-skills p {
+    color: black;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    margin: 0;  
+}
+
+.go-projects-button {
+    background-color: rgba(0, 99, 178, 1); /* Hintergrundfarbe */
+    color: white;                          /* Textfarbe */
+    border: none;                          /* Rahmen entfernen */
+    border-radius: 8px;                    /* Abgerundete Ecken */
+    font-size: 16px;                       /* Schriftgröße */
+    font-family: 'Archivo', sans-serif;   /* Schriftart */
+    padding: 10px 20px;                    /* Größe (Innenabstand!) */
+    margin-top: 40px;
+    cursor: pointer;                       /* Zeiger als Hand beim Hover */
+    text-align: center;                    /* Textausrichtung */
+    display: inline-block;                 /* Button verhält sich "blockartig" */
+}
+
+
+.education-container {
+    background-color: rgba(3, 33, 64, 1);
+    margin-top: 40px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 350px;
+    padding-right: 350px;
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+}
+
+.education-container img {
+    height: 45px;
+    margin-top: 1px;
+}
+
+.header-row {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; /* Name links, Datum rechts */
+    align-items: center;
+    width: 100%; /* wichtig, damit space-between wirkt */
+    box-sizing: border-box; /* damit Padding berücksichtigt wird */
+}
+
+.blue-text2 {
+    padding-top: 40px;
+    color: rgba(148, 232, 255, 1);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.job-container {
+    margin-top: 40px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 350px;
+    padding-right: 350px;
+    color: black;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+}
+
+.dark-blue-text {
+    color: rgba(0, 99, 178, 1);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.job-container img {
+    height: 25px;
+    margin-top: 1px;
+}
+
+/* Für Tablets und mittlere Bildschirme */
+@media screen and (max-width: 1024px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 60px; /* Abstand zur fixen Nav */
+    }
+
+    .text-container {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
+
+    .technical-skills {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .education-container,
+    .job-container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/* Für Tablets kleiner als 768px */
+@media screen and (max-width: 768px) {
+    nav {
+        padding-left: 20px;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    header {
+        height: auto;
+        padding-top: 50px; /* Höhe der Nav berücksichtigen */
+    }
+
+    .header-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text-container h1 {
+        font-size: 36px;
+    }
+
+    .white-text,
+    .blue-text {
+        font-size: 14px;
+    }
+
+    .image-container img {
+        max-height: 200px;
+    }
+
+    .technical-skills {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    section h3 {
+        font-size: 20px;
+    }
+
+    .go-projects-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .education-container,
+    .job-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .blue-text2,
+    .dark-blue-text {
+        font-size: 28px;
+    }
+}
+
+/* Für Handys kleiner als 480px */
+@media screen and (max-width: 480px) {
+    nav {
+        height: 35px;
+        padding-left: 10px;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+        line-height: 35px;
+        padding: 0 5px;
+    }
+
+    header {
+        padding-top: 45px; /* Nav-Höhe */
+    }
+
+    .text-container h1 {
+        font-size: 28px;
+    }
+
+    .white-text,
+    .blue-text {
+        font-size: 12px;
+    }
+
+    .image-container img {
+        max-height: 130px;
+    }
+
+    .technical-skills {
+        gap: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section h3 {
+        font-size: 18px;
+    }
+
+    .go-projects-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .education-container,
+    .job-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .blue-text2,
+    .dark-blue-text {
+        font-size: 22px;
+    }
+}

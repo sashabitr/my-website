@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sasha Bitrikowa - Portfolio</title>
+        <link rel="stylesheet" href="projects.css">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content"></div>
+        </div>        
+
+        <nav>
+            <a href="index.html">Homepage</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+
+        <header>
+            <div class="projects-header">
+                <h1>Projects</h1>
+                <div class="menu-container">
+                    <button class="menu-btn" data-target="3d-container">3D Modeling</button>
+                    <button class="menu-btn" data-target="websites-container">Websites</button>
+                </div>
+            </div>
+        </header>
+
+        <div id="3d-container" class="content-container active">
+            <h2>3D projects</h2>
+            <div class="image-grid">
+
+                <div class="image-card">
+                    <img src="resource/3D/chair/chair5.png" data-modal="modal-data-chair">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="modal-data-chair" class="modal-data" style="display:none">
+                    <h2>Chair with a studio light</h2>
+                    <p>Tool used: Blender.<br>A 3D chair model with a realistic wooden texture. The main goal was to design a chair with curved elements, 
+                        such as the seat and backrest, to capture the complexity of real furniture. Additionally, the project focused on 
+                        experimenting with lighting to create a clean studio light setup.<br><br></p>
+                    <img src="resource/3D/chair/chair5.png">
+                    <img src="resource/3D/chair/chair1.png">
+                    <img src="resource/3D/chair/chair2.png">
+                    <img src="resource/3D/chair/chair3.png">
+                    <img src="resource/3D/chair/chair4.png">
+                </div>
+
+                <div class="image-card">
+                    <img src="resource/3D/house/house6.png" data-modal="modal-data-house">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="modal-data-house" class="modal-data" style="display:none">
+                    <h2>Palace</h2>
+                    <p>Tool used: Blender.<br>A 3D model of Pförten Palace, the former residence of Count Heinrich von Brühl. 
+                        The real building is located in the village of Pförten, today known as Brody in Poland. 
+                        The model captures the unusual floor plan with many edges, as well as architectural details such as windows, 
+                        roof structures, chimneys, and stairs.<br><br></p>
+                    <img src="resource/3D/house/house2.png">
+                    <img src="resource/3D/house/house3.png">
+                    <img src="resource/3D/house/house4.png">
+                    <img src="resource/3D/house/house5.png">
+                    <img src="resource/3D/house/house6.png">
+                    <img src="resource/3D/house/house.png">
+                </div>
+
+                <div class="image-card">
+                    <img src="resource/3D/glasswithcube/cube2.png" data-modal="modal-data-cube">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="modal-data-cube" class="modal-data" style="display:none">
+                    <h2>Dice</h2>
+                    <p>Tool used: Blender.<br>A 3D model of a classic six-sided dice, designed in red with white pips. 
+                        The model demonstrates simple geometric precision, smooth edges, and realistic shading.<br><br></p>
+                    <video controls width="100%">
+                        <source src="resource/3D/glasswithcube/cube.mp4" type="video/mp4">
+                        Your Browser do not support videos. 
+                    </video>
+                    <img src="resource/3D/glasswithcube/cube2.png">
+                    <img src="resource/3D/glasswithcube/cube.png">
+                </div>
+
+                <div class="image-card">
+                    <img src="resource/3D/glasswithcube/glass-with-cube.png" data-modal="modal-data-glass-with-cube">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="modal-data-glass-with-cube" class="modal-data" style="display:none">
+                    <h2>Glass with dice</h2>
+                    <p>Tool used: Blender.<br>A realistic glass with a detailed glass texture was created. A single dice, modeled from scratch, 
+                        was used to generate multiple copies through an array setup. Physics simulations allowed the dice to sequentially fall 
+                        into the glass naturally. A 360-degree background image provided immersive lighting and reflections. The project 
+                        demonstrates skills in modeling, texturing, physics simulation, and scene composition.<br><br></p>
+                    <video controls width="100%">
+                        <source src="resource/3D/glasswithcube/Animation Würfel, Glass.mp4" type="video/mp4">
+                        Your Browser do not support videos. 
+                    </video>
+                    <img src="resource/3D/glasswithcube/glass-with-cube.png">
+                    <img src="resource/3D/glasswithcube/glass-with-cube2.png">
+                    <img src="resource/3D/glasswithcube/glass-with-cube3.png">
+                    <img src="resource/3D/glasswithcube/glass-with-cube4.png">
+                    <img src="resource/3D/glasswithcube/glass-with-cube5.png">
+                    <img src="resource/3D/glasswithcube/glass-with-cube6.png">
+                </div>
+
+            </div>
+        </div>        
+        
+        <div id="websites-container" class="content-container">
+            <h2>Websites</h2>
+            <div class="image-grid">
+
+                <div class="image-card">
+                    <img src="resource/website-calender/calender1.png" data-modal="modal-data-calender-website">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="modal-data-calender-website" class="modal-data" style="display:none">
+                    <h2>Progressive Web App (PWA) Calendar</h2>
+                    <ul>
+                        <li>Developed a Progressive Web App (PWA) using HTML, CSS, and JavaScript</li>
+                        <li>Calculates and displays a yearly calendar for the period 2000–2099</li>
+                    </ul>
+
+                    <p>Displayed Information: </p>
+                    <ul>
+                        <li>Year, months, days, and calendar weeks</li>
+                        <li>Current day highlighted if the current year is displayed</li>
+                        <li>Public holidays in Saxony, Germany visually highlighted</li>
+                    </ul>
+
+                    <p>PWA Features:</p>
+                    <ul>
+                        <li>Installable on devices with icons and manifest</li>
+                        <li>Service worker implemented for offline capability</li>
+                        <li>Accessible via HTTPS on a web server or local server for installation</li>
+                    </ul>
+
+                    <img src="resource/website-calender/calender1.png"><br>
+
+                    <ul>
+                        <li>Header shows the displayed calendar year and updates the page's "title" tag</li>
+                        <li>Year selection via top bar with select element</li>
+                        <li>Top bar can be shown or hidden via button</li>
+                        <li>Button to reload the PWA and return to the current year</li>
+                    </ul>
+                    <img src="resource/website-calender/calender2.png"><br>
+
+                    <p>Interactive Features:</p>
+                    <ul> 
+                        <li>Clicking or tapping on a holiday displays its name</li>
+                        <li>Handles cases where the current date and a holiday fall on the same day</li>
+                        <li>There are two types of holidays: static (e.g., New Year) and dynamic (e.g., Good Friday)</li>
+                        <li>Uses formulas for dynamic holidays (e.g., Gauss’ Easter formula)</li>
+                        <li>Correctly accounts for leap years.</li>
+                    </ul>
+                    
+                    <img src="resource/website-calender/calender3.png">
+                </div>
+
+                <div class="image-card">
+                    <img src="resource/website-portfolio/portfolio1.png" data-modal="modal-data-portfolio-website">
+                    <div class="overlay"></div>
+                </div>
+
+                <div id="modal-data-portfolio-website" class="modal-data" style="display:none">
+                    <h2>Portfolio</h2>
+                    <p>This website was developed using HTML, CSS, and JavaScript. It showcases personal and professional information, 
+                        including an introduction, technical skills, projects. The design features a full-width header with a profile image, 
+                        responsive layout, and interactive navigation. Attention was given to clean typography, structured sections, and 
+                        user-friendly interface, making the site both visually appealing and functional across devices.
+                    </p>
+                    <img src="/resource/website-portfolio/portfolio1.png">
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll(".menu-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    // alle Container ausblenden
+                    document.querySelectorAll(".content-container").forEach(container => {
+                        container.classList.remove("active");
+                    });
+
+                    // Zielcontainer anzeigen
+                    const targetId = button.getAttribute("data-target");
+                    document.getElementById(targetId).classList.add("active");
+                });
+            });
+
+            document.querySelectorAll(".image-card img").forEach(img => {
+                img.addEventListener("click", () => {
+                    const modal = document.getElementById("imageModal");
+                    const modalContent = modal.querySelector(".modal-content");
+
+                    // alten Inhalt löschen
+                    modalContent.querySelectorAll(".dynamic").forEach(el => el.remove());
+
+                    // passenden Content einfügen
+                    const contentId = img.getAttribute("data-modal");
+                    const newContent = document.getElementById(contentId).cloneNode(true);
+                    newContent.classList.add("dynamic");
+                    newContent.style.display = "block";
+                    modalContent.appendChild(newContent);
+
+                    modal.style.display = "flex";
+                });
+            });
+
+            document.querySelector(".close").addEventListener("click", () => {
+                document.getElementById("imageModal").style.display = "none";
+            });
+
+        </script>
+    </body>
+</html>
