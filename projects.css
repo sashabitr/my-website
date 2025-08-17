@@ -263,4 +263,58 @@ nav a:hover {
     font-size: 18px;
   }
   
+/* Responsivität */
+@media (max-width: 1024px) {
+  .image-grid {
+    grid-template-columns: 1fr; /* 1 Spalte auf Tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding-left: 15px;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 0 8px;
+  }
+
+  .projects-header {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .menu-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    gap: 10px;           /* Abstand zwischen den Cards */
+    padding: 20px;       /* Abstand zum Bildschirmrand */
+    justify-content: center; /* Cards mittig ausrichten */
+  }
+
+  .image-card {
+    width: 120px;        /* kleinere Cards */
+    flex: 0 0 auto;      /* verhindern, dass sie wachsen */
+  }
+
+  .modal-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .close {
+    font-size: 32px;
+    top: 10px;
+    right: 20px;
+  }
+}
+
+
 
