@@ -334,10 +334,10 @@ section h3 {
         gap: 10px;
     }
 
+    /* Navigation Schriftgröße vergrößern */
     nav a {
-        font-size: 12px;
-        line-height: 35px;
-        padding: 0 5px;
+        font-size: 18px; /* vorher z.B. 14px */
+        padding: 10px 8px; /* etwas mehr Abstand für bessere Klickbarkeit */
     }
 
     /* Header */

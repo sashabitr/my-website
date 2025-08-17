@@ -292,27 +292,35 @@ nav a:hover {
   }
 }
 
+/* Für Bildschirme bis 480px */
 @media (max-width: 480px) {
+  /* Navigation Schriftgröße vergrößern */
+  nav a {
+    font-size: 18px; /* vorher z.B. 14px */
+    padding: 10px 8px; /* etwas mehr Abstand für bessere Klickbarkeit */
+  }
+
+  /* Image Grid */
   .image-grid {
-    gap: 10px;           /* Abstand zwischen den Cards */
-    padding: 20px;       /* Abstand zum Bildschirmrand */
-    justify-content: center; /* Cards mittig ausrichten */
+    gap: 8px; /* engerer Abstand zwischen den Cards */
+    padding: 10px; /* etwas Padding um den Bildschirmrand */
   }
 
   .image-card {
-    width: 120px;        /* kleinere Cards */
-    flex: 0 0 auto;      /* verhindern, dass sie wachsen */
+    width: calc(50% - 8px); /* zwei Karten pro Reihe, weniger Weißraum */
   }
 
+  /* Modal Content */
   .modal-content {
-    max-width: 90%;
-    padding: 15px;
+    max-width: 95%;
+    padding: 10px;
   }
 
+  /* Close Button */
   .close {
-    font-size: 32px;
+    font-size: 28px;
     top: 10px;
-    right: 20px;
+    right: 15px;
   }
 }
 
