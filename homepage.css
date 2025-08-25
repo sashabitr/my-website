@@ -260,199 +260,130 @@ section h3 {
     }
 }
 
-/* Für Tablets kleiner als 768px */
+/* ========== Tablets <768px ========== */
 @media screen and (max-width: 768px) {
-    nav {
-        padding-left: 20px;
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 0 8px;
-    }
-
-    header {
-        height: auto;
-        padding-top: 50px; /* Höhe der Nav berücksichtigen */
-    }
-
-    .header-container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .text-container h1 {
-        font-size: 36px;
-    }
-
-    .white-text,
-    .blue-text {
-        font-size: 14px;
-    }
-
-    .image-container img {
-        max-height: 200px;
-    }
-
-    .technical-skills {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-
-    section h3 {
-        font-size: 20px;
-    }
-
-    .go-projects-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .education-container,
-    .job-container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .blue-text2,
-    .dark-blue-text {
-        font-size: 28px;
-    }
-}
-
-/* Für Handys kleiner als 480px */
-@media screen and (max-width: 480px) {
     /* Navigation */
     nav {
-        height: 35px;
-        padding-left: 10px;
-        gap: 10px;
+        height: 40px;
+        padding: 0 20px;
+        gap: 20px;
     }
-
-    /* Navigation Schriftgröße vergrößern */
     nav a {
-        font-size: 18px; /* vorher z.B. 14px */
-        padding: 10px 8px; /* etwas mehr Abstand für bessere Klickbarkeit */
+        font-size: 16px;
+        padding: 0 8px;
     }
 
     /* Header */
     header {
-        padding-top: 45px; /* Höhe der Nav berücksichtigen */
+        height: 600px;
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
-
     .header-container {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-
-    .text-container {
-        padding: 0;
-        text-align: center;
-    }
-
     .text-container h1 {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 32px;
+    }
+    .white-text, .blue-text {
+        font-size: 14px;
     }
 
-    .white-text,
-    .blue-text {
-        font-size: 12px;
-        line-height: 16px;
-    }
-
-    .study-text {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .study-text img {
-        max-height: 30px;
-    }
-
-    .image-container {
-        margin-top: 15px;
-    }
-
+    /* Image Cards */
     .image-container img {
-        max-height: 10px !important;
-        border-radius: 20px;
+        max-height: 200px;
+        width: auto;
+        max-width: 90%;
+        margin: 0 auto;
+        border-radius: 15px;
     }
 
-    /* Section */
-    section h2 {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-
-    section h3 {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
+    /* Technical Skills */
     .technical-skills {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        align-items: center;
     }
-
     .technical-skills img {
         max-width: 120px;
         height: auto;
     }
-
     .technical-skills p {
-        font-size: 12px;
-        line-height: 14px;
-    }
-
-    .go-projects-button {
-        font-size: 12px;
-        padding: 6px 12px;
-        margin-top: 20px;
-    }
-
-    /* Education & Job */
-    .education-container,
-    .job-container {
-        max-height: 600px !important;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 12px;
-    }
-
-    .blue-text2,
-    .dark-blue-text {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    .education-container img,
-    .job-container img {
-        max-height: 30px;
-        margin-top: 5px;
-    }
-
-    .header-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-
-    /* Listen */
-    .education-container ul,
-    .job-container ul {
-        padding-left: 20px;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 14px;
+        text-align: center;
     }
 }
+
+/* ========== Handys <480px ========== */
+@media screen and (max-width: 480px) {
+    /* Navigation */
+    nav {
+        height: 60px !important;
+        padding: 0 15px !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important; /* Links umbrechen wenn zu lang */
+    }
+    nav a {
+        font-size: 40px !important;
+        padding: 12px 10px !important;
+    }
+
+    /* Header */
+    header {
+        height: auto !important;
+        padding: 80px 15px 50px 15px !important; /* mehr Platz nach oben */
+    }
+    .text-container h1 {
+        font-size: 36px !important;
+        line-height: 42px !important;
+    }
+    .white-text, .blue-text {
+        font-size: 18px !important;
+        line-height: 24px !important;
+    }
+
+    /* Image */
+    .image-container img {
+        max-height: 200px !important;
+        max-width: 100% !important;
+    }
+
+    /* Technical Skills */
+    .technical-skills {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+    }
+    .technical-skills img {
+        max-width: 140px !important;
+    }
+    .technical-skills p {
+        font-size: 16px !important;
+    }
+
+    /* Education & Jobs */
+    .education-container,
+    .job-container {
+        padding: 20px !important;
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+    .education-container h3,
+    .job-container h3 {
+        font-size: 20px !important;
+    }
+
+    /* Buttons */
+    .go-projects-button {
+        font-size: 18px !important;
+        padding: 14px 24px !important;
+        margin-top: 30px !important;
+    }
+}
+
+
+
+
+
 
