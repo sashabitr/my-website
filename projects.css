@@ -292,27 +292,67 @@ nav a:hover {
   }
 }
 
-/* Für Bildschirme bis 480px */
 @media (max-width: 480px) {
-  /* Navigation Schriftgröße vergrößern */
-  nav a {
-    font-size: 18px; /* vorher z.B. 14px */
-    padding: 10px 8px; /* etwas mehr Abstand für bessere Klickbarkeit */
+  /* Navigation */
+  nav {
+    height: 60px !important;
+    padding: 0 15px !important;
+    justify-content: left !important;
+    flex-wrap: wrap !important; /* Links umbrechen wenn zu lang */
+}
+nav a {
+    font-size: 20px !important;
+    padding: 12px 10px !important;
+}
+
+  .projects-header h1 {
+    display: none !important;
   }
+   .menu-container {
+    margin-top: 10px !important;
+   }
 
   /* Image Grid */
   .image-grid {
-    gap: 8px; /* engerer Abstand zwischen den Cards */
-    padding: 10px; /* etwas Padding um den Bildschirmrand */
+    grid-template-columns: 1fr; /* 1 Spalte */
+    gap: 8px;
+    justify-items: center;      /* horizontal zentrieren */
+    align-items: center;
+    padding: 10px;
   }
 
   .image-card {
-    width: calc(50% - 8px); /* zwei Karten pro Reihe, weniger Weißraum */
+    width: 100%;
+    max-width: 70%;   /* volle Breite nutzen */
+    height: auto;      /* proportional */
+    overflow: hidden;
+    display: block;
+    border-radius: 6px;
+    text-align: center; 
+  }
+
+  .image-card img {
+    width: 100%;       /* volle Breite */
+    height: auto;      /* proportional */
+    display: block;
+    margin: 0 auto;      /* zentrieren */
+    transition: transform 0.3s ease;
+  }
+
+  /* Modal Content Bilder */
+  .modal-content img,
+  .modal-content video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
   }
 
   /* Modal Content */
   .modal-content {
-    max-width: 95%;
+    max-width: 90%;
     padding: 10px;
   }
 
@@ -323,6 +363,7 @@ nav a:hover {
     right: 15px;
   }
 }
+
 
 
 

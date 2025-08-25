@@ -364,13 +364,27 @@ section h3 {
     /* Education & Jobs */
     .education-container,
     .job-container {
+        height: 900px !important;
         padding: 20px !important;
         font-size: 16px !important;
         line-height: 22px !important;
     }
+
     .education-container h3,
     .job-container h3 {
-        font-size: 20px !important;
+        font-size: 20px !important;      /* Schriftgröße */
+        line-height: 1.5 !important;
+    }
+
+    .dark-blue-text {
+        line-height: 1.0 !important;
+    }
+
+    .header-row {
+        flex-direction: column;     /* Elemente untereinander */
+        align-items: flex-start;    /* optional: linksbündig */
+        justify-content: flex-start;/* Elemente oben starten */
+        gap: 2px;
     }
 
     /* Buttons */
